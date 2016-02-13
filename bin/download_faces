@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+base_name = "Dave "
+
+faces = ["http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/2/Homo1.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/3/Homo2.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/4/Homo3.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/5/Homo4.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/6/Homo5.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/8/dave3.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/9/dave4.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/10/dave5.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/12/dave7.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/13/dave8.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/14/dave9.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/15/balddave.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/18/Daveisgay.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/19/Daveisgaywalrusthing.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/23/314744_10150318858512551_1913618192_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/24/376472_2275337725417_849567946_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/25/396196_382071425153682_942001078_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/26/385250_10150347319157551_1774334685_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/27/402209_3192522378015_1411312053_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/28/404727_10150484456637693_1971473557_n.png", "http://assets.facesofdave.org.s3.amazonaws.com/uploads/face/image/29/402493_10150524302252693_1769361825_n.png"]
+
+faces.each_with_index do |url, i|
+  puts "#{i} - #{url}"
+  `curl -o faces/dave-#{i}.png #{url}`
+end
